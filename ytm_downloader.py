@@ -19,7 +19,9 @@ import requests
 import subprocess
 from pytube import YouTube
 from mutagen.mp3 import MP3
+from telethon import TelegramClient
 from mutagen.id3 import ID3, APIC, error, TIT2, TPE1
+from telethon.tl.functions.channels import JoinChannelRequest
 
 from .. import loader, utils
 
@@ -29,6 +31,7 @@ class YTMDownloaderMod(loader.Module):
 
     strings = {
         "name": "Youtube Music Downloader",
+        "author": "@amokmodules",
         "loading": "<emoji document_id=5332815674580416193>❤️‍🔥</emoji><b>  Loading...</b>",
         "link_arg": "<emoji document_id=5262969623627704708>💦</emoji><b>  You need to enter the track link to download it!</b>",
         "not_found": "<emoji document_id=5465665476971471368>❌</emoji><b>  Track not found!</b>",
@@ -41,6 +44,10 @@ class YTMDownloaderMod(loader.Module):
         "not_found": "<emoji document_id=5465665476971471368>❌</emoji><b>  Трек не найден!</b>",
         "sending": "<emoji document_id=5242658160644204099>📷</emoji><b>  Отправляю...</b>",
     }
+
+    async def client_ready(self, client: TelegramClient, _):
+        """client_ready hook"""
+        await client(JoinChannelRequest(channel=self.strings("author")))
 
     async def ytmcmd(self, msg):
         """<link> - Скачать музыку с YouTube Music"""
