@@ -30,7 +30,7 @@ class YTMDownloaderMod(loader.Module):
     """Модуль для скачивания музыки с сервиса YouTube Music"""
 
     strings = {
-        "name": "Youtube Music Downloader",
+        "name": "YoutubeMusicDownloader",
         "author": "@amokmodules",
         "loading": "<emoji document_id=5332815674580416193>❤️‍🔥</emoji><b>  Loading...</b>",
         "link_arg": "<emoji document_id=5262969623627704708>💦</emoji><b>  You need to enter the track link to download it!</b>",
