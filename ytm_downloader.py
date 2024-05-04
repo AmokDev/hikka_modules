@@ -13,7 +13,6 @@
 # © Copyright 2024 | https://t.me/AmokModules
 # Licensed under the MIT License
 # meta developer: @AmokModules
-# requires: ffmpeg
 
 import os
 import requests
