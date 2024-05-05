@@ -32,17 +32,17 @@ class YTMDownloaderMod(loader.Module):
     strings = {
         "name": "YoutubeMusicDownloader",
         "author": "@amokmodules",
-        "loading": "<emoji document_id=5332815674580416193>❤️‍🔥</emoji><b>  Loading...</b>",
-        "link_arg": "<emoji document_id=5262969623627704708>💦</emoji><b>  You need to enter the track link to download it!</b>",
+        "loading": "<emoji document_id=5242658160644204099>📷</emoji><b>  Loading...</b>",
+        "link_arg": "<emoji document_id=5244520836420872203>🔋</emoji><b>  You need to enter the track link to download it!</b>",
         "not_found": "<emoji document_id=5465665476971471368>❌</emoji><b>  Track not found!</b>",
-        "sending": "<emoji document_id=5242658160644204099>📷</emoji> <b>Sending...</b>",
+        "sending": "<emoji document_id=5244914117986231107>➡️</emoji> <b>Sending...</b>",
     }
 
     strings_ru = {
-        "loading": "<emoji document_id=5332815674580416193>❤️‍🔥</emoji><b>  Загрузка...</b>",
-        "link_arg": "<emoji document_id=5262969623627704708>💦</emoji><b>  Вам нужно ввести ссылку на трек, чтобы скачать его!</b>",
+        "loading": "<emoji document_id=5242658160644204099>📷</emoji><b>  Загрузка...</b>",
+        "link_arg": "<emoji document_id=5244520836420872203>🔋</emoji><b>  Вам нужно ввести ссылку на трек, чтобы скачать его!</b>",
         "not_found": "<emoji document_id=5465665476971471368>❌</emoji><b>  Трек не найден!</b>",
-        "sending": "<emoji document_id=5242658160644204099>📷</emoji><b>  Отправляю...</b>",
+        "sending": "<emoji document_id=5244914117986231107>➡️</emoji>  Отправляю...</b>",
     }
 
     async def client_ready(self, client: TelegramClient, _):
