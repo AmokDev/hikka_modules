@@ -64,9 +64,9 @@ class YTMDownloaderMod(loader.Module):
             return
 
         path = self.convert_to_mp3(track[0])
-        await utils.run_sync(self.edit_voice_tags, path, track[1], track[2], track[3])
+        image_data = await utils.run_sync(self.edit_voice_tags, path, track[1], track[2], track[3])
         await msg.edit(self.strings("sending"))
-        await self._client.send_file(msg.peer_id, path)
+        await self._client.send_file(msg.peer_id, path, thumb=image_data)
         os.remove(path)
         await msg.delete()
 
@@ -82,6 +82,7 @@ class YTMDownloaderMod(loader.Module):
             audio.save()
         except error:
             pass
+        return image_data
 
     def convert_to_mp3(self, file):
         file_name, ext = os.path.splitext(file)
