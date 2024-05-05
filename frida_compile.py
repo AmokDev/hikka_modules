@@ -13,7 +13,7 @@
 # © Copyright 2024 | https://t.me/AmokModules
 # Licensed under the MIT License
 # meta developer: @AmokModules
-# requires: frida-tools frida
+# scope: hikka_only
 
 import os
 import frida
